@@ -7,8 +7,10 @@ function accordion() {
             let accDetails = accHeader.nextElementSibling;
             if(accDetails.style.maxHeight){
                 accDetails.style.maxHeight = null
+                accHeader.lastElementChild.innerHTML = '+'
             }else{
                 accDetails.style.maxHeight = accDetails.scrollHeight + 'px';
+                accHeader.lastElementChild.innerHTML = '-'
             }
         })
     }
